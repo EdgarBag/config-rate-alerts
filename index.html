@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="socket.js"></script>
+    <script src="socketbetc.js"></script>
+</head>
+
+<body>
+    <a href='https://www.binance.com/en/trade/BTC_USDT' target="_blank">Binance </a>
+    <div id="errorMSG">
+        <p id="errorP"></p>
+    </div>
+    <div style='color:black'>
+        <table>
+            <tr>
+                <td>
+                    <div>
+                        <div id="priceBinance"
+                            style="width:350px; margin: 40px;height: 210px; border: solid 1px black; text-align: center;background-color: #b9ccc7;font-family: Georgia, 'Times New Roman', Times, serif;font-size: 20px;float: left;">
+                            <p id="dateOfTrade"></p>
+                            <label>Binance : BTC / USDT</label>
+                            <p id="rateBTC"></p>
+                            <p id="daylyChangeP"></p>
+                        </div>
+                </td>
+                <td>
+                    <div id="changeRate"
+                        style="width: 350px;margin: 40px; height: 210px; border: solid 1px black; text-align: center; background-color: #b9ccc7;font-family: Georgia, 'Times New Roman', Times, serif;font-size: 20px;float: left;">
+                        <p id="dateOfChange"></p>
+                        <label> Last Trade Change</label>
+                        <p id="changeRateValue"></p>
+                        <hr>
+                        <p>Last Price change greater 1$ </p>
+                        <p id="lastBiggestChange"></p>
+                    </div>
+                </td>
+                <td>
+                    <div id="listOfCHangesDiv" style="width: 350px;margin: 40px; height: 300px; border: solid 1px black; text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 20px; overflow:auto; background-color: #b9ccc7;float: left; ">
+                        <p><u>The biggest changes list</u></p>
+                        <div id="listOfCHanges"></div>
+                    </div>
+                </td>
+                <td>
+                    <div id="feedCheckList" style="width: 350px;margin: 40px; height: 300px; border: solid 1px black; text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 20px; overflow:auto; background-color: #b9ccc7;">
+                        <p><u>Last Binance Feed Checks</u></p>
+                        <div id="binanceChecksList"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="deviationDiv" style="width: 350px;margin: 40px; height: 200px; border: solid 1px black; text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 20px; background-color: #b9ccc7; ">
+                        <p>Deviation:</p>
+                        <hr>
+                        <p id="deviationP"></p>
+                        <p id="numberOfCheckedTrades" style="transform: translateY(50px) translateX(-70px);">number of
+                            trades: <span id="checkedTrades"></span></p>
+                    </div>
+                </td>
+                <td>
+                    <div id="countTradesDiv" style="width: 350px;margin: 40px; height: 200px; border: solid 1px black; text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 20px; background-color: #b9ccc7; ">
+                        <p>Number of trades 1 Sec:<span id="tradesPerSecond"></span> </p>
+                        <hr>
+                        <p>Number of trades 1 Min:<span id="tradesPerMinute"></span> </p>
+                        <hr>
+                        <p>Number of trades 1 Hour:<span id="tradesPerHour"></span> </p>
+                    </div>
+                </td>
+                <td>
+                    <div id="devitionListDiv" style="width: 350px;margin: 40px; height: 300px; border: solid 1px black; text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 20px; overflow:auto; background-color: #b9ccc7;">
+                        <p><u>Devitions list bigger 1$</u></p>
+                        <p id="devitionList"></p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
